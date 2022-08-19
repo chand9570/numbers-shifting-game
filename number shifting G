@@ -1,0 +1,71 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char str[20];
+    int  a[4][4]={3,5,2,6,7,8,1,9,15,13,12,11,4,10,14},i,j,r=60;
+
+    printf("\n \n\t \t RULE OF THIS GAME ");
+
+    printf("\n\n1. You can move only 1 step at a time arrow key ");
+
+    printf("\n\t Move Up    : by Up arrow key");
+
+    printf("\n\t Move Down  : by Down arrow key");
+
+    printf("\n\t Move Left  : by Left arrow key");
+
+    printf("\n\t Move Right : by Right arrow key");
+
+    printf("\n2. You can move number at empty position only");
+
+    printf("\n\n3. For each valid move : your total number of move will decreased by 1");
+
+    printf("\n4. Winning situation : Number in a 4*4 matrix should be in order from 1 to 15 ");
+
+    printf("\n\n\tWinning situation :");
+
+    printf("\n-----------------------");
+    printf("\n|  1  |  2  |  3 |  4 | ");
+    printf("\n|  5  |  6  |  7 |  8 | ");
+    printf("\n|  9  | 10  | 11 | 12 | ");
+    printf("\n| 13  | 14  | 15 |    | ");
+    printf("\n----------------------- ");
+
+    printf("\n5. You can exit the game at any time by pressing '0'  so try to win in minimum no of move ");
+
+    printf("\nEnter any key to start .....");
+    getch();
+    printf("\n Enter Player Name :");
+
+
+    fgets(str,20,stdin);
+
+    system("cls");
+
+    printf("\nPlayer Name is : %s",str);
+
+    printf("\n Move remaining : %d",r);
+    printf("\n\n");
+     for(i=0;i<=3;i++)
+    {
+        for(j=0;j<=3;j++)
+        {
+            if(i==0||j==0||i==1||j==1||i==2||j==2)
+                printf("|  %d  |",a[i][j]);
+
+            else
+                printf("  ");
+
+        }
+        printf("  \n");
+
+    }
+
+
+    getch();
+    return 0;
+}
